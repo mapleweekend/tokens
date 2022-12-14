@@ -4040,12 +4040,12 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.progressbar.Exps.Progress,
 		C3.Plugins.System.Cnds.Compare,
 		C3.Plugins.System.Exps.roundtodp,
+		C3.Plugins.System.Exps.random,
 		C3.Plugins.System.Cnds.Else,
 		C3.Plugins.progressbar.Cnds.CompareProgress,
 		C3.Plugins.System.Cnds.Every,
 		C3.Behaviors.Platform.Acts.SimulateControl,
 		C3.Plugins.Sprite.Acts.SetAngle,
-		C3.Plugins.System.Exps.random,
 		C3.Plugins.System.Acts.Wait,
 		C3.Behaviors.Flash.Acts.Flash,
 		C3.Plugins.System.Acts.SaveState,
@@ -4262,7 +4262,8 @@ self.C3_ExpressionFuncs = [
 		() => 0,
 		p => {
 			const v0 = p._GetNode(0).GetVar();
-			return () => (v0.GetValue() + 25);
+			const f1 = p._GetNode(1).GetBoundMethod();
+			return () => (v0.GetValue() + f1(25, 50));
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
