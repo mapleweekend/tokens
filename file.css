@@ -6,6 +6,7 @@ body {
 .buybutton, .play, .button {
 	box-shadow: 0px 5px 0px rgba(0, 0, 0, 0.5);
 	border:1px solid var(--button-border);
+	font-size:18px;
 }	
 
 .buybutton:hover, .play:hover .button:hover {
@@ -17,6 +18,7 @@ body {
 #store {
 	border-top-left-radius:15px;
 	border-bottom-left-radius:15px;
+	font-size:16px;
 }
 
 #backToGame {
